@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: jobmarket_postgres
+    environment:
+      POSTGRES_USER: jobmarket
+      POSTGRES_PASSWORD: jobmarket123
+      POSTGRES_DB: jobmarket_db
+      POSTGRES_HOST_AUTH_METHOD: trust
+    command: postgres -c hba_file=/etc/postgresql/pg_hba.conf
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./pg_hba.conf:/etc/postgresql/pg_hba.conf
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
