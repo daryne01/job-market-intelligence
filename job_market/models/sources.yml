@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: public
+    database: jobmarket_db
+    schema: public
+    tables:
+      - name: raw_jobs
+      - name: processed_jobs
