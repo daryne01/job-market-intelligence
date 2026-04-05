@@ -8,7 +8,7 @@ An end-to-end data engineering pipeline that scrapes, processes and visualises U
 
 \## 🔗 Live Dashboard
 
-\[View Live →](YOUR\_AWS\_URL\_HERE)
+\[View Live →](http://51.20.189.152:8501)
 
 
 
